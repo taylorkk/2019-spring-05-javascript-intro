@@ -74,7 +74,21 @@ $("#myButton").click(function(){
   $("#myAlert").hide();
 });
 ```
+#### Waiting for the DOM
 
+One last thing - the internet is funny, and sometimes files don't load in the order you want them to. 
+
+What do you think will happen if our javascript loads and runs before the HTML is done loading? 
+
+If our javascript loads too quickly, it won't be able to find the html elements we're assigning actions to, and nothing will work. To get around this, we have to tell our javascript to wait until our webpage (or "document") is done loading (or "ready"). We do this by wrapping all of our event handler code in a document ready handler. It looks something like this: 
+
+```javascript
+$(document).ready(function(){
+	$("#myButton").click(function(){
+     $("#myAlert").hide();
+  });
+});
+```
 ### Practice Together
 1. Open the practice folder in Atom.
 2. In the HTML, link your javascript file
