@@ -76,17 +76,20 @@ $("#myButton").click(function(){
 ```
 #### Waiting for the DOM
 
-One last thing - the internet is funny, and sometimes files don't load in the order you want them to. 
+One last thing - the internet is funny, and sometimes files don't load in the order you want them to.
 
-What do you think will happen if our javascript loads and runs before the HTML is done loading? 
+What do you think will happen if our javascript loads and runs before the HTML is done loading?
 
-If our javascript loads too quickly, it won't be able to find the html elements we're assigning actions to, and nothing will work. To get around this, we have to tell our javascript to wait until our webpage (or "document") is done loading (or "ready"). We do this by wrapping all of our event handler code in a document ready handler. It looks something like this: 
+If our javascript loads too quickly, it won't be able to find the html elements we're assigning actions to, and nothing will work. To get around this, we have to tell our javascript to wait until our webpage (or "document") is done loading (or "ready"). We do this by wrapping all of our event handler code in a document ready handler. It looks something like this:
 
 ```javascript
 $(document).ready(function(){
+
 	$("#myButton").click(function(){
      $("#myAlert").hide();
   });
+
+
 });
 ```
 ### Practice Together
@@ -96,4 +99,4 @@ $(document).ready(function(){
 3. In the Javascript file, follow the instructions in the comments to create a toggled menu.
 
 ### Project: Practice on Your Own
-Open the puppy funhouse hoemwork repo to practice your event handlers!! 
+Open the puppy funhouse hoemwork repo to practice your event handlers!!
